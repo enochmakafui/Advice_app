@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faQuoteRight, faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
 
 const Advice = () => {
   const [data, setData] = useState({ slip: { advice: "", id: "" } });
@@ -20,7 +22,12 @@ const Advice = () => {
   return (
     <div className="advice">
       <h3 className="advice-head">Advice #{data.slip.id || 0}</h3>
-      <p className="advice-text">" {data.slip.advice || defaultAdvice} "</p>
+      <p className="advice-text">
+        <FontAwesomeIcon icon={faQuoteLeft} />
+        {"  " + data.slip.advice || defaultAdvice + "  "}
+
+        <FontAwesomeIcon icon={faQuoteRight} />
+      </p>
       <div className="divider">
         <svg width="295" height="16" xmlns="http://www.w3.org/2000/svg">
           <g fill="none" fill-rule="evenodd">

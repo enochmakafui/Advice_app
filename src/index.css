@@ -39,7 +39,7 @@ body {
 .advice-head {
   color: hsl(150, 100%, 66%);
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 
 .advice-text {
