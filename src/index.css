@@ -69,7 +69,28 @@ body {
 .divider {
   margin-bottom: 2rem;
 }
+.guide {
+  color: hsl(0, 0%, 100%);
+  font-size: 0.8rem;
+  margin-bottom: 2rem;
+}
+.loading {
+  color: hsl(150, 100%, 66%);
+  font-size: 0.8rem;
+  margin-bottom: 2rem;
+}
 
+[data-load="true"] {
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) scale(1.2);
+  }
+}
 /* desktop design */
 
 @media (min-width: 850px) {
